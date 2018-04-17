@@ -11,7 +11,7 @@
 			.data
 			.align 2
 
-strDigitada:		.space 16			
+strDigitada:		.space 16
 strMenu:		.asciiz "\nMenu principal de opcoes\n1 - Insercao\n2 - Remocao\n3 - Busca\n4 - Visualizacao\n5 - Fim\n\nEscolha uma opcao (1 a 5): "
 strDigiteIns:		.asciiz ">> Digite o binario para insercao: "
 strDigiteRem:		.asciiz ">> Digite o binario para remocao: "
@@ -46,7 +46,7 @@ digMenos:		.byte '-'
 			.globl main
 
 
- ################################################################################################################################################################################## 
+ #################################################################################################################################
  # 
  # 			INICIALIZA O PROGRAMA
  # 
@@ -102,19 +102,19 @@ opcaoInvalida:		li	$v0, 4				 # print String
 
  # 			FIM MENU
  # 
- ################################################################################################################################################################################## 
+ #################################################################################################################################
  # 
  # 			ALGORITIMO DA INSERCAO
  # 
  # 			Le a chave binaria atraves de uma string, ate ser uma string valida (apenas zero e um)
  # 			Percorre a string, verificando cada byte da string, vendo se e um byte '0' ou um byte '1'
- # 			Percorre a arvore, a partir da raiz, de acordo com cada byte, (zero ou um), e caso o caminho ainda nao exista
- # 			vai alocando os nos necessarios para construir o caminho. Ao fim da insercao, se a info do no final for 1, quer dizer que a chave ja existia
- # 			na arvore, e portanto a insercao eh repitida
+ # 			Percorre a arvore, a partir da raiz, de acordo com cada byte, (zero ou um), e caso o caminho ainda nao
+ # 			exista vai alocando os nos necessarios para construir o caminho. Ao fim da insercao, se a info do no 
+ # 			final for 1, quer dizer que a chave ja existia na arvore, e portanto a insercao eh repitida
  # 
 
 insere:			li	$v0, 4				 # print String
-			la	$a0, strDigiteIns		 # Digite um binario para insercao (">> Digite o binario para insercao: ")
+			la	$a0, strDigiteIns		 # (">> Digite o binario para insercao: ")
 			syscall
 
 			jal	leString			 # quando volta da funcao, tem em $v0 ou 0 (string lida com sucesso) ou -1 (string invalida)
@@ -175,7 +175,7 @@ insercaoRepetida:						 # chave repetida
 
  # 			FIM INSERE
  #
- ################################################################################################################################################################################## 
+ #################################################################################################################################
  #
  # 			ALGORITIMO DA REMOCAO
  # 
@@ -352,7 +352,7 @@ imprimeEsqRemocao:	li	$v0, 4
 
  # 			FIM REMOVE
  #
- ################################################################################################################################################################################## 
+ #################################################################################################################################
  #
  # 			ALGORITIMO DA BUSCA
  # 
@@ -491,7 +491,7 @@ imprimeEsq:		move	$t5, $v0			 # salvando o conteudo do retorno da funcao, para n
 
  # 			FIM BUSCA
  #
- ################################################################################################################################################################################## 
+ #################################################################################################################################
  #
  # 			ALGORITIMO DA VISUALIZACAO
  # 
@@ -635,7 +635,7 @@ fimVisualiza:		li	$v0, 4
 
  # 			FIM VISUALIZA
  #
- ################################################################################################################################################################################## 
+ #################################################################################################################################
  #
  # 			ALGORITIMO DA LEITURA DE STRINGS
  # 	
@@ -686,12 +686,12 @@ fimVerificaString:	li	$v0, 0				 # auxliar = 0, indica que a chava digitada e va
 
  # 			FIM LE STRING
  #
- ################################################################################################################################################################################## 
+ #################################################################################################################################
  # 
  # 			ALOCA NO
  # 
- # 			Aloca um novo no, de acordo com uma "struct" de 12 bytes, sendo eles, 4 para ponteiro para esquerda, 4 para ponteiro para a direita e
- # 			4 que indicam se eh um no terminal ou nao
+ # 			Aloca um novo no, de acordo com uma "struct" de 12 bytes, sendo eles, 4 para ponteiro para esquerda,
+ # 			4 para ponteiro para a direita e 4 que indicam se eh um no terminal ou nao
  # 			ao fim dessa funcao, $v0 tem o endereco do no alocado
  # 
 
@@ -706,7 +706,7 @@ novoNo:			li	$v0, 9				 # avisei que quero alocar
 
  # 			FIM ALOCA NO
  #
- ################################################################################################################################################################################## 
+ #################################################################################################################################
  #
  # 			ENCERRA A EXECUCAO DO PROGRAMA
  #
@@ -716,5 +716,5 @@ encerraPrograma:	li	$v0, 10
 
  # 			FIM ENCERRA
  #
- ################################################################################################################################################################################## 
+ #################################################################################################################################
 

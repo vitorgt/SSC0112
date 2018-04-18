@@ -1,5 +1,5 @@
 # Digital Computer Organization I
-SSC0112
+[SSC0112](https://uspdigital.usp.br/jupiterweb/obterDisciplina?sgldis=SSC0112)
 
 Institute of Mathematical and Computer Sciences
 

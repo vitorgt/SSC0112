@@ -1,5 +1,5 @@
-# SSC0112
-Digital Computer Organization I
+# Digital Computer Organization I
+SSC0112
 
 Institute of Mathematical and Computer Sciences
 

@@ -666,7 +666,7 @@ leString: 		li	$v0, 8
 			syscall
 			j	menu				 # se o primeiro byte e '-' e o segundo '1', vai para o menu
 
-verificaStringValida:	addi	$t0,$t0,1			 # na 1a iteracao, o byte ja esta carregado e n cai nessa linha (cai em "verStrByteCarregado)
+verificaStringValida:	addi	$t0,$t0,1			 # na 1a iteracao, o byte ja esta carregado e n cai nessa linha (cai em "verStrByteCarregado")
 			lb	$t1,0($t0)
 verStrByteCarregado:	beq	$t1, $s1, fimVerificaString	 # compara com o \n -> faria com $zero, para achar o \0, mas, tem o \n antes!!
 			beq	$t1, $s2, verificaStringValida	 # compara com '1' -> se e 1, e valido com certeza 
